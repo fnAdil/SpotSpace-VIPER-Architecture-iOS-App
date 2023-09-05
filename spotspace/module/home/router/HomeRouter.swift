@@ -24,7 +24,7 @@ class HomeRouter: HomeRouterProtocol {
     static func start() -> HomeRouterProtocol {
         let router = HomeRouter()
         
-        let view: HomeViewProtocol = HomeViewController()
+        var view: HomeViewProtocol = HomeViewController()
         let interactor: HomeInteractorProtocol = HomeInteractor()
         let presenter: HomePresenterProtocol = HomePresenter()
         

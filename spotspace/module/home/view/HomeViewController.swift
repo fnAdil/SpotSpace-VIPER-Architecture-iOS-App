@@ -18,9 +18,14 @@ protocol SpotTableDelegate: AnyObject {
     func updateFavoriteCell(for spotId: Int, isFavorite: Bool)
 }
 
-class HomeViewController: HomeViewProtocol {
+class HomeViewController: UIViewController, HomeViewProtocol {
     
     var presenter: HomePresenterProtocol?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .brown
+    }
     
     func update(with spot: [Spot]) {
         

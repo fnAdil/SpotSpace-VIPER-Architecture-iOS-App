@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE5B70032AA6757A008C31D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70022AA6757A008C31D9 /* AppDelegate.swift */; };
 		BE5B70052AA6757A008C31D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */; };
-		BE5B70072AA6757A008C31D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70062AA6757A008C31D9 /* ViewController.swift */; };
-		BE5B700A2AA6757A008C31D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5B70082AA6757A008C31D9 /* Main.storyboard */; };
 		BE5B700C2AA6757B008C31D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B700B2AA6757B008C31D9 /* Assets.xcassets */; };
 		BE5B700F2AA6757B008C31D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5B700D2AA6757B008C31D9 /* LaunchScreen.storyboard */; };
 		BE5B701A2AA6757B008C31D9 /* spotspaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70192AA6757B008C31D9 /* spotspaceTests.swift */; };
@@ -50,8 +48,6 @@
 		BE5B6FFF2AA6757A008C31D9 /* spotspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5B70022AA6757A008C31D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE5B70062AA6757A008C31D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE5B70092AA6757A008C31D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE5B700B2AA6757B008C31D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE5B700E2AA6757B008C31D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5B70102AA6757B008C31D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,13 +117,8 @@
 		BE5B70012AA6757A008C31D9 /* spotspace */ = {
 			isa = PBXGroup;
 			children = (
+				BEDD2C402AA712590086A0DA /* app */,
 				BE5B70322AA67996008C31D9 /* module */,
-				BE5B70022AA6757A008C31D9 /* AppDelegate.swift */,
-				BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */,
-				BE5B70062AA6757A008C31D9 /* ViewController.swift */,
-				BE5B70082AA6757A008C31D9 /* Main.storyboard */,
-				BE5B700B2AA6757B008C31D9 /* Assets.xcassets */,
-				BE5B700D2AA6757B008C31D9 /* LaunchScreen.storyboard */,
 				BE5B70102AA6757B008C31D9 /* Info.plist */,
 			);
 			path = spotspace;
@@ -264,6 +255,17 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		BEDD2C402AA712590086A0DA /* app */ = {
+			isa = PBXGroup;
+			children = (
+				BE5B70022AA6757A008C31D9 /* AppDelegate.swift */,
+				BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */,
+				BE5B700B2AA6757B008C31D9 /* Assets.xcassets */,
+				BE5B700D2AA6757B008C31D9 /* LaunchScreen.storyboard */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,7 +372,6 @@
 			files = (
 				BE5B700F2AA6757B008C31D9 /* LaunchScreen.storyboard in Resources */,
 				BE5B700C2AA6757B008C31D9 /* Assets.xcassets in Resources */,
-				BE5B700A2AA6757A008C31D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5B704E2AA67F92008C31D9 /* DetailViewController.swift in Sources */,
-				BE5B70072AA6757A008C31D9 /* ViewController.swift in Sources */,
 				BE5B703A2AA679F2008C31D9 /* Spot.swift in Sources */,
 				BE5B70502AA67FBB008C31D9 /* DetailInteractor.swift in Sources */,
 				BE5B70032AA6757A008C31D9 /* AppDelegate.swift in Sources */,
@@ -445,14 +445,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE5B70082AA6757A008C31D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE5B70092AA6757A008C31D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE5B700D2AA6757B008C31D9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -590,7 +582,6 @@
 				INFOPLIST_FILE = spotspace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,7 +609,6 @@
 				INFOPLIST_FILE = spotspace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
