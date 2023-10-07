@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE01E2812AACC86B00DB0ABC /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01E2802AACC86B00DB0ABC /* HomePresenterTests.swift */; };
 		BE5B70032AA6757A008C31D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70022AA6757A008C31D9 /* AppDelegate.swift */; };
 		BE5B70052AA6757A008C31D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */; };
 		BE5B700C2AA6757B008C31D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B700B2AA6757B008C31D9 /* Assets.xcassets */; };
@@ -14,9 +15,7 @@
 		BE5B701A2AA6757B008C31D9 /* spotspaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70192AA6757B008C31D9 /* spotspaceTests.swift */; };
 		BE5B70242AA6757B008C31D9 /* spotspaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70232AA6757B008C31D9 /* spotspaceUITests.swift */; };
 		BE5B70262AA6757B008C31D9 /* spotspaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70252AA6757B008C31D9 /* spotspaceUITestsLaunchTests.swift */; };
-		BE5B70362AA679BB008C31D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70352AA679BB008C31D9 /* Category.swift */; };
-		BE5B70382AA679DD008C31D9 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70372AA679DD008C31D9 /* Coordinates.swift */; };
-		BE5B703A2AA679F2008C31D9 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70392AA679F2008C31D9 /* Spot.swift */; };
+		BE5B703A2AA679F2008C31D9 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70392AA679F2008C31D9 /* HomeEntity.swift */; };
 		BE5B703D2AA67A2E008C31D9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B703C2AA67A2E008C31D9 /* HomeInteractor.swift */; };
 		BE5B70422AA67A8F008C31D9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70412AA67A8F008C31D9 /* HomePresenter.swift */; };
 		BE5B70442AA67AB4008C31D9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70432AA67AB4008C31D9 /* HomeRouter.swift */; };
@@ -25,6 +24,7 @@
 		BE5B70502AA67FBB008C31D9 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B704F2AA67FBB008C31D9 /* DetailInteractor.swift */; };
 		BE5B70522AA67FD1008C31D9 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70512AA67FD1008C31D9 /* DetailPresenter.swift */; };
 		BE5B70542AA67FE7008C31D9 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B70532AA67FE7008C31D9 /* DetailRouter.swift */; };
+		BEDD2C432AA74DE20086A0DA /* SpotHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDD2C422AA74DE20086A0DA /* SpotHomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE01E2802AACC86B00DB0ABC /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		BE5B6FFF2AA6757A008C31D9 /* spotspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5B70022AA6757A008C31D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5B70042AA6757A008C31D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +57,7 @@
 		BE5B701F2AA6757B008C31D9 /* spotspaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotspaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5B70232AA6757B008C31D9 /* spotspaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotspaceUITests.swift; sourceTree = "<group>"; };
 		BE5B70252AA6757B008C31D9 /* spotspaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotspaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BE5B70352AA679BB008C31D9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		BE5B70372AA679DD008C31D9 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
-		BE5B70392AA679F2008C31D9 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		BE5B70392AA679F2008C31D9 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		BE5B703C2AA67A2E008C31D9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BE5B70412AA67A8F008C31D9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BE5B70432AA67AB4008C31D9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		BE5B704F2AA67FBB008C31D9 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		BE5B70512AA67FD1008C31D9 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		BE5B70532AA67FE7008C31D9 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		BEDD2C422AA74DE20086A0DA /* SpotHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5B70192AA6757B008C31D9 /* spotspaceTests.swift */,
+				BE01E2802AACC86B00DB0ABC /* HomePresenterTests.swift */,
 			);
 			path = spotspaceTests;
 			sourceTree = "<group>";
@@ -153,55 +154,14 @@
 		BE5B70332AA679A7008C31D9 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				BE5B703F2AA67A3C008C31D9 /* view */,
-				BE5B703B2AA67A1E008C31D9 /* interactor */,
-				BE5B703E2AA67A33008C31D9 /* presenter */,
-				BE5B70342AA679AD008C31D9 /* entity */,
-				BE5B70402AA67A47008C31D9 /* router */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
-		BE5B70342AA679AD008C31D9 /* entity */ = {
-			isa = PBXGroup;
-			children = (
-				BE5B70352AA679BB008C31D9 /* Category.swift */,
-				BE5B70372AA679DD008C31D9 /* Coordinates.swift */,
-				BE5B70392AA679F2008C31D9 /* Spot.swift */,
-			);
-			path = entity;
-			sourceTree = "<group>";
-		};
-		BE5B703B2AA67A1E008C31D9 /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-				BE5B703C2AA67A2E008C31D9 /* HomeInteractor.swift */,
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
-		BE5B703E2AA67A33008C31D9 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BE5B70412AA67A8F008C31D9 /* HomePresenter.swift */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		BE5B703F2AA67A3C008C31D9 /* view */ = {
-			isa = PBXGroup;
-			children = (
+				BEDD2C412AA74DC80086A0DA /* cell */,
 				BE5B70452AA67AD3008C31D9 /* HomeViewController.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		BE5B70402AA67A47008C31D9 /* router */ = {
-			isa = PBXGroup;
-			children = (
+				BE5B703C2AA67A2E008C31D9 /* HomeInteractor.swift */,
+				BE5B70412AA67A8F008C31D9 /* HomePresenter.swift */,
+				BE5B70392AA679F2008C31D9 /* HomeEntity.swift */,
 				BE5B70432AA67AB4008C31D9 /* HomeRouter.swift */,
 			);
-			path = router;
+			path = home;
 			sourceTree = "<group>";
 		};
 		BE5B70472AA67F54008C31D9 /* detail */ = {
@@ -264,6 +224,14 @@
 				BE5B700D2AA6757B008C31D9 /* LaunchScreen.storyboard */,
 			);
 			path = app;
+			sourceTree = "<group>";
+		};
+		BEDD2C412AA74DC80086A0DA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BEDD2C422AA74DE20086A0DA /* SpotHomeCollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,15 +365,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5B704E2AA67F92008C31D9 /* DetailViewController.swift in Sources */,
-				BE5B703A2AA679F2008C31D9 /* Spot.swift in Sources */,
+				BE5B703A2AA679F2008C31D9 /* HomeEntity.swift in Sources */,
 				BE5B70502AA67FBB008C31D9 /* DetailInteractor.swift in Sources */,
 				BE5B70032AA6757A008C31D9 /* AppDelegate.swift in Sources */,
 				BE5B70542AA67FE7008C31D9 /* DetailRouter.swift in Sources */,
 				BE5B70462AA67AD3008C31D9 /* HomeViewController.swift in Sources */,
+				BEDD2C432AA74DE20086A0DA /* SpotHomeCollectionViewCell.swift in Sources */,
 				BE5B70422AA67A8F008C31D9 /* HomePresenter.swift in Sources */,
 				BE5B70052AA6757A008C31D9 /* SceneDelegate.swift in Sources */,
-				BE5B70362AA679BB008C31D9 /* Category.swift in Sources */,
-				BE5B70382AA679DD008C31D9 /* Coordinates.swift in Sources */,
 				BE5B70522AA67FD1008C31D9 /* DetailPresenter.swift in Sources */,
 				BE5B70442AA67AB4008C31D9 /* HomeRouter.swift in Sources */,
 				BE5B703D2AA67A2E008C31D9 /* HomeInteractor.swift in Sources */,
@@ -417,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5B701A2AA6757B008C31D9 /* spotspaceTests.swift in Sources */,
+				BE01E2812AACC86B00DB0ABC /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

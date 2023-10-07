@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 import CoreLocation
 
-struct Spot: Hashable, Codable ,Identifiable {
+struct Spot: Hashable, Codable {
+    var name: String
+    var description: String
+}
+
+/*
+struct Spot: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
@@ -36,4 +42,17 @@ struct Spot: Hashable, Codable ,Identifiable {
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
     }
+}
+ */
+
+enum Category: String, CaseIterable, Codable{
+    case lakes = "Lakes"
+    case rivers = "Rivers"
+    case mountains = "Mountains"
+}
+
+
+struct Coordinates: Hashable, Codable {
+    var latitude: Double
+    var longitude: Double
 }

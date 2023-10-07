@@ -7,23 +7,37 @@
 
 import Foundation
 
+enum FetchError: Error {
+    case failed
+}
+
 protocol HomePresenterProtocol: AnyObject {
     var view: HomeViewProtocol? { get set }
     var interactor: HomeInteractorProtocol? { get set }
     var router: HomeRouterProtocol? { get set }
     func interactorDidFetchSpots(with result: Result<[Spot], Error>)
-    
 }
 
 class HomePresenter: HomePresenterProtocol {
     
     var view: HomeViewProtocol?
     
-    var interactor: HomeInteractorProtocol?
-    
     var router: HomeRouterProtocol?
     
+    var interactor: HomeInteractorProtocol? {
+        didSet {
+            interactor?.getSpots()
+        }
+    }
+    
     func interactorDidFetchSpots(with result: Result<[Spot], Error>) {
-        
+        DispatchQueue.main.async {
+            switch result {
+            case .failure:
+                self.view?.update(with: "Error")
+            case .success(let spots):
+                self.view?.update(with: spots)
+            }
+        }
     }
 }

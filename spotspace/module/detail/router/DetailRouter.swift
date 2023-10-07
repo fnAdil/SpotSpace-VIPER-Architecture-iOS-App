@@ -12,13 +12,13 @@ typealias DetailEntry = DetailViewProtocol & UIViewController
 
 protocol DetailRouterProtocol: AnyObject {
     var entryPoint: DetailEntry? { get }
-    static func prepare(with spot: Spot, delegate: SpotTableDelegate) -> DetailRouterProtocol
+    static func prepare(with spot: Spot, delegate: SpotCollectionViewDelegate) -> DetailRouterProtocol
 }
 
 class DetailRouter: DetailRouterProtocol {
     var entryPoint: DetailEntry?
     
-    static func prepare(with spot: Spot, delegate: SpotTableDelegate) -> DetailRouterProtocol {
+    static func prepare(with spot: Spot, delegate: SpotCollectionViewDelegate) -> DetailRouterProtocol {
         let router = DetailRouter()
         
         let view: DetailViewProtocol = DetailViewController()

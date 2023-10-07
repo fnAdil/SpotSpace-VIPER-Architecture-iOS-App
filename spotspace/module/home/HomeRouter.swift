@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 typealias EntryPoint = HomeViewProtocol & UIViewController
-typealias SpotList = UIViewController & SpotTableDelegate
+typealias SpotList = UIViewController & SpotCollectionViewDelegate
 
 protocol HomeRouterProtocol: AnyObject {
     var entry: EntryPoint? { get }
@@ -24,7 +24,7 @@ class HomeRouter: HomeRouterProtocol {
     static func start() -> HomeRouterProtocol {
         let router = HomeRouter()
         
-        var view: HomeViewProtocol = HomeViewController()
+        let view: HomeViewProtocol = HomeViewController()
         let interactor: HomeInteractorProtocol = HomeInteractor()
         let presenter: HomePresenterProtocol = HomePresenter()
         
