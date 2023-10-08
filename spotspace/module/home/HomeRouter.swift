@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 typealias EntryPoint = HomeViewProtocol & UIViewController
-typealias SpotList = UIViewController & SpotCollectionViewDelegate
+typealias SpotList = UIViewController & SpotTableViewDelegate
 
 protocol HomeRouterProtocol: AnyObject {
     var entry: EntryPoint? { get }
@@ -42,7 +42,9 @@ class HomeRouter: HomeRouterProtocol {
     }
     
     func navigate(with spot: Spot, rootviewController: SpotList) {
-        
+        let router = DetailRouter.prepare(with: spot, delegate: rootviewController)
+        guard let DetailVC = router.entryPoint else { return }
+        rootviewController.navigationController?.pushViewController(DetailVC, animated: true)
     }
 }
 

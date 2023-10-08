@@ -31,13 +31,11 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func interactorDidFetchSpots(with result: Result<[Spot], Error>) {
-        DispatchQueue.main.async {
-            switch result {
-            case .failure:
-                self.view?.update(with: "Error")
-            case .success(let spots):
-                self.view?.update(with: spots)
-            }
+        switch result {
+        case .failure:
+            self.view?.update(with: "Error")
+        case .success(let spots):
+            self.view?.update(with: spots)
         }
     }
 }

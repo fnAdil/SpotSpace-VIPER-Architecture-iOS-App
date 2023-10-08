@@ -10,8 +10,10 @@ import UIKit
 import CoreLocation
 
 struct Spot: Hashable, Codable {
-    var name: String
-    var description: String
+    var id: String?
+    var name: String?
+    var description: String?
+    var imageUrl: String?
 }
 
 /*

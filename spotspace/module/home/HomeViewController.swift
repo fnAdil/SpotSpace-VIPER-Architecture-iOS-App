@@ -14,7 +14,7 @@ protocol HomeViewProtocol: AnyObject {
     func update(with error: String)
 }
 
-protocol SpotCollectionViewDelegate: AnyObject {
+protocol SpotTableViewDelegate: AnyObject {
     func updateFavoriteCell(for spotId: Int, isFavorite: Bool)
 }
 
@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     var spots: [Spot] = [Spot]() {
         didSet {
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -66,16 +66,20 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     func update(with spot: [Spot]) {
-        spots = spot
-        tableView.isHidden = false
-        label.isHidden = true
+        DispatchQueue.main.async {
+            self.spots = spot
+            self.tableView.isHidden = false
+            self.label.isHidden = true
+        }
     }
     
     func update(with error: String) {
-        spots = []
-        label.isHidden = false
-        tableView.isHidden = true
-        label.text = "Error: \(error)"
+        DispatchQueue.main.async {
+            self.spots = []
+            self.label.isHidden = false
+            self.tableView.isHidden = true
+            self.label.text = "Error: \(error)"
+        }
     }
 }
 
@@ -90,9 +94,23 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        cell.titleLabel.text = spots[indexPath.row].name
-        cell.subTitleLabel.text = spots[indexPath.row].description
+        cell.updateCell(with: spots[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.router?.navigate(with: spots[indexPath.row], rootviewController: self)
+    }
+    
+}
+
+extension HomeViewController: SpotTableViewDelegate {
+    func updateFavoriteCell(for spotId: Int, isFavorite: Bool) {
+        //TODO: update Favorite cell here
     }
 }
