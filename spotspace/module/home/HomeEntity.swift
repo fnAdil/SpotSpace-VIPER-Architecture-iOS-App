@@ -12,8 +12,10 @@ import CoreLocation
 struct Spot: Hashable, Codable {
     var id: String?
     var name: String?
+    var subTitle: String?
     var description: String?
     var imageUrl: String?
+    var isFavourite: Bool?
 }
 
 /*

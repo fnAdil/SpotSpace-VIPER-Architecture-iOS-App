@@ -12,10 +12,8 @@ protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol? { get set }
     func update(with spot: [Spot])
     func update(with error: String)
-}
-
-protocol SpotTableViewDelegate: AnyObject {
-    func updateFavoriteCell(for spotId: Int, isFavorite: Bool)
+    func updateFavourite(with spot: Spot)
+    func updateFavourite(with error: String)
 }
 
 class HomeViewController: UIViewController, HomeViewProtocol {
@@ -34,13 +32,14 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         label.numberOfLines = 0
         label.isHidden = true
         label.textColor = .black
-        label.text = "null"
+        label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .singleLine
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isHidden = true
         return tableView
@@ -81,6 +80,22 @@ class HomeViewController: UIViewController, HomeViewProtocol {
             self.label.text = "Error: \(error)"
         }
     }
+    
+    func updateFavourite(with spot: Spot) {
+        DispatchQueue.main.async {
+            guard let rowIndex = self.spots.firstIndex(where: {$0.id == spot.id}) else { return }
+            let indexPath = IndexPath(row: rowIndex, section: 0)
+            self.spots[indexPath.row] = spot
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? SpotHomeTableViewCell else { return }
+            cell.setFavourite(isFavourite: spot.isFavourite ?? false)
+        }
+    }
+    
+    func updateFavourite(with error: String) {
+        DispatchQueue.main.async {
+            
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -93,7 +108,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             return UITableViewCell()
         }
-        
+        cell.delegate = self
         cell.updateCell(with: spots[indexPath.row])
         
         return cell
@@ -107,10 +122,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         presenter?.router?.navigate(with: spots[indexPath.row], rootviewController: self)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+
+        }
+    }
 }
 
 extension HomeViewController: SpotTableViewDelegate {
-    func updateFavoriteCell(for spotId: Int, isFavorite: Bool) {
-        //TODO: update Favorite cell here
+    func updateFavoriteCell(for spot: Spot) {
+        presenter?.updateFavourite(with: spot)
     }
 }

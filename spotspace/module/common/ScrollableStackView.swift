@@ -58,6 +58,7 @@ class ScrollableStackView: UIView {
         let titleLabel = UILabel()
         titleLabel.font = .preferredFont(forTextStyle: .title1)
         titleLabel.text = spot.name
+        addArrangedSubview(titleLabel)
     }
     
     func addDivederLine() {
